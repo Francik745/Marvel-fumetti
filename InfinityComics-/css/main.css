@@ -1,0 +1,210 @@
+.f-p {
+  font-family: 'Bangers', cursive;
+}
+
+.f-s {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+:root {
+  --tot-c: #0f0826;
+  --main-c: #2C1267;
+  --sec-c: #4f2c8d;
+  --thi-c: #604Ac7;
+  --acc-c: #C88DA5;
+}
+
+.tx-sec {
+  color: var(--sec-c);
+}
+
+.tx-thi {
+  color: var(--thi-c);
+}
+
+.tx-acc {
+  color: var(--acc-c);
+}
+
+.bg-main {
+  background-color: var(--main-c) !important;
+}
+
+.bg-sec {
+  background-color: var(--sec-c) !important;
+}
+
+.bg-thi {
+  background-color: var(--thi-c) !important;
+}
+
+.bg-acc {
+  background-color: var(--acc-c) !important;
+}
+
+.bg-tot {
+  background-color: var(--tot-c) !important;
+}
+
+
+body {
+  background-color: var(--tot-c);
+}
+
+.search-input-nav {
+  background-color: transparent !important; 
+  border-bottom: 2px solid var(--thi-c) !important;
+}
+
+::placeholder {
+  color: white !important;
+  opacity: 1; /* Firefox */
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.btn-marvel{
+font-family: 'Rajdhani', sans-serif;
+font-weight: 100;
+font-size: 20px;
+color: #fff;
+background-color: #c88da5;
+padding: 14px 38px;
+border: solid #c88da5 0px;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+
+
+.bg-section-info {
+  height: 50vh;
+  background: linear-gradient(var(--tot-c),transparent,var(--tot-c)), url("https://sm.ign.com/t/ign_latam/screenshot/default/cross_e57c.1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.bg-card-comic {
+  background-color: #1e104ec0;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid var(--thi-c);
+  background-image: url("https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 20px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--acc-c);
+}
+
+.bg-section-cta {
+  height: 50vh;
+  background: linear-gradient(var(--tot-c),transparent,var(--tot-c)), url("https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn-register{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #fff;
+    background-color: #c88da5;
+    padding: 14px 38px;
+    border: solid #c88da5 0px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-contact{
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  color: #fff;
+  background-color: var(--thi-c);
+  padding: 14px 38px;
+  border: solid var(--thi-c) 0px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+

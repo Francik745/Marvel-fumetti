@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    
+    
+    <style>
+        
+        .btn-review {
+            border: none;
+            padding: 10px 15px;
+            border-radius: 15px;
+            background-color: #5d5d5d;
+        }
+        
+        .border-creators {
+            border-bottom: 0.5px solid gray;
+        }
+        
+        #chartdiv {
+            width: 100%;
+            height: 500px;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            opacity: 0.5;
+        }
+    
+    </style>
+    
+</head>
+<body>
+    
+    <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-trasparent fixed-top" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand d-block d-md-none" href="#">
+                <img src="./downloads/logo.png" width="100" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0 d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="navbar-brand me-auto d-none d-md-block" href="#">
+                            <img src="./downloads/logo.png" width="120" alt="">
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link f-s text-white" href="./Annuncio.html">Aggiungi fumetto</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link f-s text-white" href="#">Contatta con noi</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn f-s dropdown-toggle text-white rounded-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Multilingua
+                            </button>
+                            <ul class="dropdown-menu f-s rounded-0">
+                                <li><button class="dropdown-item" type="button">EN 🇬🇧</button></li>
+                                <li><button class="dropdown-item" type="button">ES 🇪🇸</button></li>
+                                <li><button class="dropdown-item" type="button">IT 🇮🇹</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+                
+                <button class="btn text-white f-s mx-3">
+                    <i class="bi bi-person-add"></i>
+                    <a class="text-decoration-none text-white" href="./Register.html">Register</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="container-fluid py-5 bg-detail">
+        <div class="container py-5">
+            <div class="row mb-5 py-5">
+                <div class="col-12 col-md-6">
+                    <p id="serie" class="f-s h1 tx-thi"></p>
+                    <p id="title" class="f-p display-1 text-white"></p>
+                    
+                    <p class="f-s lead text-white">Grafico Reviews</p>
+                    
+                    <div id="chartdiv">
+                        
+                    </div>
+                    
+                    <button class="btn-review text-white f-s mt-5">
+                        <i class="bi bi-plus-lg"></i>lascia un commento
+                    </button>
+                    <button class="btn-review text-white f-s">
+                        <i class="bi bi-person"></i>Contatta con il seller
+                    </button>
+                    
+                    <p class="tx-acc f-s fw-bold h3 m-0 mt-5">About</p>
+                    <p id="desc" class="m-0 f-s text-secondary"></p>
+                    
+                    <p class="f-s text-secondary mt-5 m-0">data di pubblicazione</p>
+                    <p id="pubblished" class="f-s tx-thi m-0 lead fw-bold">12/12/12</p>
+                    
+                </div>
+                <div class="col-12 col-md-6">
+                    <img id="img-comic" src="" class="img-fluid" alt="">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="f-s text-secondary lead mt-5">Metodi di pagamento possibili</p>
+                        </div>
+                        <div class="col-4 text-center">
+                            <img src="./downloads/logo-stripe.png" alt="">
+                        </div>
+                        <div class="col-4 text-center">
+                            <img src="./downloads/logo-paypal.png" alt="">
+                        </div>
+                        <div class="col-4 text-center">
+                            <img src="./downloads/logo-visa.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="f-s text-secondary lead mt-5">Conosci i creatori del fumetto</p>
+                        </div>
+                        <div class="col-12">
+                            <ul id="creatorsWrapper" class="list-unstyled">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <p class="f-s h2 tx-acc">Altri fumetti che potrebbero interessarti</p>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-12">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                     
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    
+    
+    
+    
+    <footer>
+        <div class="container py-5 my-5">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 mb-3">
+                    <img src="./downloads/logo.png" width="100" alt="">
+                    <p class="f-p h1 text-white">Infinity Comics</p>
+                    <p class="copyright f-s lead tx-acc"></p>
+                </div>
+                <div class="col-12 col-md-4 mb-3 text-center">
+                    <p class="text-white f-s">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam cumque voluptate, architecto odio neque optio iste exercitationem hic, distinctio aut laboriosam similique reprehenderit eligendi cum, maxime fugit dolores aspernatur voluptatibus!</p>
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-end">
+                    <ul class="f-s text-white">
+                        <li>
+                            <a href="" class="text-decoration-none tx-acc">contatta con il team di sviluppo</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-decoration-none tx-acc">scopri come aggiungere annuncio</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-decoration-none tx-acc">richiedi infomazioni</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-decoration-none tx-acc">richiedi come essere admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    
+    <script>
+        
+
+ 
+        
+        fetch('./comics.json')
+        .then(response => response.json())
+        .then(json => {
+            
+            let collection = json.data.results
+            
+            
+            function randomDate(start, end) {
+                return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+            }
+            
+            collection.forEach((comic) => {
+                comic.pubblished = randomDate(new Date(2023, 0, 1), new Date())
+            })
+            
+            console.log(collection)
+            
+            function getComicsByTitle(title) {
+                return collection.find((comic) => {
+                    return comic.title == title;
+                })
+            }
+            
+            const detailGame = getComicsByTitle('Incredible Hulks (2010) #604 (DJURDJEVIC 70TH ANNIVERSARY VARIANT)')
+            
+            const bgDetail = document.querySelector('.bg-detail')
+            const serie = document.querySelector('#serie');
+            const title = document.querySelector('#title');
+            const desc = document.querySelector('#desc');
+            const pubblished = document.querySelector('#pubblished');
+            const imgComic = document.querySelector('#img-comic');
+            const creatorsWrapper = document.querySelector('#creatorsWrapper');
+            
+            console.log(detailGame)
+            
+            bgDetail.style.background = `linear-gradient(rgba(0,0,0,0.8), rgb(15, 8, 38)),  url("${detailGame.images[0].path}.jpg")`;
+            bgDetail.style.backgroundPosition = 'center';
+            bgDetail.style.backgroundSize = 'cover';
+            bgDetail.style.repeat = 'no-repeat';
+            
+            serie.textContent = detailGame.series.name
+            
+            title.textContent = detailGame.title.split('#')[0]
+            
+            desc.textContent = (detailGame.description) ? detailGame.description : "non esiste una descrizione dettagliata del fumetto disponibile"
+            
+            pubblished.textContent = new Intl.DateTimeFormat('it-IT', { dateStyle: 'full' }).format(detailGame.pubblished)
+            
+            imgComic.src = `${detailGame.images[0].path}.jpg`
+            
+            detailGame.creators.items.forEach(item => {
+                let li = document.createElement('li')
+                li.classList.add('border-creators', 'py-2', 'mb-3')
+                li.innerHTML = `
+                
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <p class="f-s text-white m-0">${item.name}</p>
+                        <p class="small text-secondary f-s m-0">${item.role}</p>
+                    </div>
+                    <button class="btn btn-outline-dark text-white f-s">
+                        + follow
+                    </button>
+                </div>
+                `
+                creatorsWrapper.append(li)
+                
+            })
+            
+            function getRelated(game) {
+                
+                return collection.filter((comic) => {
+                    return comic.characters.items.some((item) => {
+                        return game.characters.items.map((item) => item.name).includes(item.name) 
+                    })
+                })
+                
+            }
+            
+            const related = getRelated(detailGame)
+
+            console.log(related)
+
+            let swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+
+            const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+            related.forEach(comic => {
+                console.log(comic)
+                let div = document.createElement('div')
+                div.classList.add('swiper-slide')
+                div.innerHTML = `
+                
+                <div class="card text-bg-dark">
+                                <img src="${(!comic.images.length == 0) ? comic.images[0].path : "https://blogs.cul.columbia.edu/rbml/files/2021/12/1991QuarterlyCover-scaled"}.jpg" class="card-img overlay" alt="...">
+                                <div class="card-img-overlay d-flex flex-column justify-content-between">
+                                <div>
+                                    <p class="card-title f-p h1">${comic.title.split('#')[0]}</p>
+                                    <p class="card-text f-s lead">${comic.series.name}</p>
+                                </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn d-flex align-items-center">
+                                            <a href="" class="my-0 me-2 f-s tx-acc fw-bold text-decoration-none">Checkout</a>
+                                            <i class="bi bi-arrow-right-circle-fill fs-2 tx-acc"></i>
+                                          </button>
+                                    </div>
+                                </div>
+                              </div>
+                
+                
+                `
+                swiperWrapper.append(div)
+
+            })
+        })
+        
+        
+        am5.ready(function() {
+            
+            // Create root element
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            var root = am5.Root.new("chartdiv");
+            
+            root._logo.dispose()
+            // Set themes
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([
+            am5themes_Animated.new(root)
+            ]);
+            
+            
+            // Create chart
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/
+            var chart = root.container.children.push(am5xy.XYChart.new(root, {
+                panX: false,
+                panY: false,
+                wheelX: "none",
+                wheelY: "none"
+            }));
+            
+            // Add cursor
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+            var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+            cursor.lineY.set("visible", false);
+            
+            // Create axes
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+            var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 0 });
+            
+            var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
+                maxDeviation: 0,
+                categoryField: "name",
+                renderer: xRenderer,
+                tooltip: am5.Tooltip.new(root, {})
+            }));
+            
+            xRenderer.grid.template.set("visible", false);
+            
+            xAxis.get("renderer").labels.template.setAll({
+                fill: root.interfaceColors.get("alternativeText")
+            });
+            
+            var yRenderer = am5xy.AxisRendererY.new(root, {});
+            var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+                maxDeviation: 0,
+                min: 0,
+                extraMax: 0.1,
+                renderer: yRenderer
+            }));
+            
+            yAxis.get("renderer").labels.template.setAll({
+                fill: root.interfaceColors.get("alternativeText")
+            });
+            
+            yRenderer.grid.template.set("visible", false)
+            
+            
+            // Create series
+            // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+            var series = chart.series.push(am5xy.ColumnSeries.new(root, {
+                name: "Series 1",
+                xAxis: xAxis,
+                yAxis: yAxis,
+                valueYField: "value",
+                sequencedInterpolation: true,
+                categoryXField: "name",
+                tooltip: am5.Tooltip.new(root, { dy: -25, labelText: "{valueY}" })
+            }));
+            
+            
+            series.columns.template.setAll({
+                cornerRadiusTL: 5,
+                cornerRadiusTR: 5,
+                strokeOpacity: 0
+            });
+            
+            series.columns.template.adapters.add("fill", (fill, target) => {
+                return chart.get("colors").getIndex(series.columns.indexOf(target));
+            });
+            
+            series.columns.template.adapters.add("stroke", (stroke, target) => {
+                return chart.get("colors").getIndex(series.columns.indexOf(target));
+            });
+            
+            chart.get("colors").set("colors", [
+            am5.color("#C88DA5"),
+            am5.color("#604Ac7"),
+            am5.color("#4f2c8d"),
+            am5.color("#2C1267")
+            ]);
+            
+            
+            
+            // Set data
+            var data = [
+            {
+                name: "Exceptional",
+                value: 75,
+                bulletSettings: { src: "./downloads/dart.png" }
+            },
+            {
+                name: "Recommended",
+                value: 60,
+                bulletSettings: { src: "./downloads/like.png" }
+            },
+            {
+                name: "Meh",
+                value: 40,
+                bulletSettings: { src: "./downloads/warning.png" }
+            },
+            {
+                name: "Skip",
+                value: 20,
+                bulletSettings: { src: "./downloads/stop.png" }
+            }
+            ];
+            
+            series.bullets.push(function() {
+                return am5.Bullet.new(root, {
+                    locationY: 1,
+                    sprite: am5.Picture.new(root, {
+                        templateField: "bulletSettings",
+                        width: 50,
+                        height: 50,
+                        centerX: am5.p50,
+                        centerY: am5.p50,
+                        shadowColor: am5.color(0x000000),
+                        shadowBlur: 4,
+                        shadowOffsetX: 4,
+                        shadowOffsetY: 4,
+                        shadowOpacity: 0.6
+                    })
+                });
+            });
+            
+            xAxis.data.setAll(data);
+            series.data.setAll(data);
+            
+            // Make stuff animate on load
+            // https://www.amcharts.com/docs/v5/concepts/animations/
+            series.appear(1000);
+            chart.appear(1000, 100);
+            
+        }); // end am5.ready()
+        
+    </script>
+</body>
+</html>

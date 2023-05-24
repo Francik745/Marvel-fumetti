@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>  
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    
+  <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-trasparent fixed-top" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand d-block d-md-none" href="#">
+        <img src="./downloads/logo.png" width="100" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          
+          <li class="nav-item">
+            <a class="nav-link f-s text-white" href="./Annuncio.html">Aggiungi fumetto</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link f-s text-white" href="#">Contatta con noi</a>
+          </li>
+          
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn f-s dropdown-toggle text-white rounded-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Multilingua
+              </button>
+              <ul class="dropdown-menu f-s rounded-0">
+                <li><button class="dropdown-item" type="button">EN 🇬🇧</button></li>
+                <li><button class="dropdown-item" type="button">ES 🇪🇸</button></li>
+                <li><button class="dropdown-item" type="button">IT 🇮🇹</button></li>
+              </ul>
+            </div>
+          </li>
+          
+        </ul>
+        <a class="navbar-brand me-auto d-none d-md-block" href="#">
+          <img src="./downloads/logo.png" width="120" alt="">
+        </a>
+        <form role="search mx-3">
+          <input class="form-control rounded-0 search-input-nav border-0 text-white f-s" type="search" placeholder=" 🔍 Search " aria-label="Search">
+        </form>
+        <button class="btn text-white f-s mx-3">
+          <i class="bi bi-person-add"></i>
+          <a class="text-decoration-none text-white" href="./Register.html">Register</a>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <header>
+    <div class="overlay"></div>  
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="./downloads/marvel.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-white">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-6 text-center">
+                <h1 class="text-white f-p display-3 mb-3">Benvenuti nel nostro negozio online di fumetti!</h1>
+                <p class="f-s tx-acc lead mb-4">Siamo una community di appassionati di fumetti, lettori e collezionisti, appassionati di storie che apprezzano il formato cartaceo, la bellezza dell'illustrazione e il piacere di toccare le pagine.</p>
+                <button class="btn-marvel d-block mx-auto">
+                  <a href="./TuttiAnnunci.html" class="text-decoration-none text-white">Visitali tutti 🚀</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Scopri i nostri numeri -->
+  <section> 
+    <div class="container my-5 py-5">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <p class="h1 f-p text-white">Ecco perche vendere e comprare da noi...</p>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-12 col-md-4">
+          <div class="card bg-transparent text-center">
+            <i class="bi bi-people fs-1 tx-acc"></i>
+            <p class="text-white f-p lead">Utenti soddisfatti</p>
+            <p id="users" class="text-white f-s display-3">0</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card bg-transparent text-center">
+            <i class="bi bi-stickies fs-1 tx-acc"></i>
+            <p class="text-white f-p lead">Annunci pubblicati</p>
+            <p id="ads" class="text-white f-s display-3">0</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card bg-transparent text-center">
+            <i class="bi bi-truck fs-1 tx-acc"></i>
+            <p class="text-white f-p lead">Metodi di spedizione</p>
+            <p id="delivery" class="text-white f-s display-3">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- sezione mission  -->
+  <section>
+    <div class="container-fluid bg-section-info">
+      <div class="container h-100 my-5 py-5">
+        <div class="row h-100 align-items-center justify-content-center">
+          <div class="col-12 col-md-7 text-center">
+            <p class="f-p display-3 text-white">LOREM MISSION</p>
+            <p class="f-s lead text-white fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis reprehenderit excepturi deleniti consequatur hic eveniet ducimus facere quia doloremque perspiciatis praesentium laborum debitis quaerat, corporis pariatur numquam. Iure, unde ipsa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- section upcoming books -->
+  
+  <section>
+    <div class="container my-5 py-5">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <span class="f-p text-white display-5">Upcoming</span>
+          <span class="f-p tx-acc display-5">Books</span>
+        </div>
+      </div>
+      <div id="upcomingBooksWrapper" class="row mb-5">
+        <!-- <div class="col-12 col-md-6 mb-4">
+          
+          
+        </div> -->
+        
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- section testimonials subscribers -->
+  <section>
+    <div class="container my-5 py-5">
+      <div class="row mb-5"> 
+        <div class="col-12 text-center">
+          <p class="f-p tx-thi display-4">Testimonials Utenti</p>
+          <p class="f-p text-white lead">Leggi cosa ti consigliano i nostri appassionati di fumetti...</p>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-12">
+          <!-- Swiper -->
+          <div class="swiper mySwiper my-5 py-3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card bg-transparent">
+                  <div class="container">
+                    <div class="row">
+                      <p class="small text-white f-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, at aperiam! Molestiae placeat ratione voluptas necessitatibus, mollitia iste cum fugiat dolorem eligendi nam cupiditate. Distinctio ipsam nulla officiis neque praesentium?</p>
+                      <div class="avatar mx-auto my-3"></div>
+                      <div>
+                        <i class="bi bi-facebook text-white mx-2"></i>
+                        <i class="bi bi-whatsapp text-white mx-2"></i>
+                        <i class="bi bi-instagram text-white mx-2"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-transparent">
+                  <div class="container">
+                    <div class="row">
+                      <p class="small text-white f-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, at aperiam! Molestiae placeat ratione voluptas necessitatibus, mollitia iste cum fugiat dolorem eligendi nam cupiditate. Distinctio ipsam nulla officiis neque praesentium?</p>
+                      <div class="avatar mx-auto my-3"></div>
+                      <div>
+                        <i class="bi bi-facebook text-white mx-2"></i>
+                        <i class="bi bi-whatsapp text-white mx-2"></i>
+                        <i class="bi bi-instagram text-white mx-2"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-transparent">
+                  <div class="container">
+                    <div class="row">
+                      <p class="small text-white f-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, at aperiam! Molestiae placeat ratione voluptas necessitatibus, mollitia iste cum fugiat dolorem eligendi nam cupiditate. Distinctio ipsam nulla officiis neque praesentium?</p>
+                      <div class="avatar mx-auto my-3"></div>
+                      <div>
+                        <i class="bi bi-facebook text-white mx-2"></i>
+                        <i class="bi bi-whatsapp text-white mx-2"></i>
+                        <i class="bi bi-instagram text-white mx-2"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-transparent">
+                  <div class="container">
+                    <div class="row">
+                      <p class="small text-white f-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, at aperiam! Molestiae placeat ratione voluptas necessitatibus, mollitia iste cum fugiat dolorem eligendi nam cupiditate. Distinctio ipsam nulla officiis neque praesentium?</p>
+                      <div class="avatar mx-auto my-3"></div>
+                      <div>
+                        <i class="bi bi-facebook text-white mx-2"></i>
+                        <i class="bi bi-whatsapp text-white mx-2"></i>
+                        <i class="bi bi-instagram text-white mx-2"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-transparent">
+                  <div class="container">
+                    <div class="row">
+                      <p class="small text-white f-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, at aperiam! Molestiae placeat ratione voluptas necessitatibus, mollitia iste cum fugiat dolorem eligendi nam cupiditate. Distinctio ipsam nulla officiis neque praesentium?</p>
+                      <div class="avatar mx-auto my-3"></div>
+                      <div>
+                        <i class="bi bi-facebook text-white mx-2"></i>
+                        <i class="bi bi-whatsapp text-white mx-2"></i>
+                        <i class="bi bi-instagram text-white mx-2"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card bg-transparent">
+                  <div class="container">
+                    <div class="row">
+                      <p class="small text-white f-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, at aperiam! Molestiae placeat ratione voluptas necessitatibus, mollitia iste cum fugiat dolorem eligendi nam cupiditate. Distinctio ipsam nulla officiis neque praesentium?</p>
+                      <div class="avatar mx-auto my-3"></div>
+                      <div>
+                        <i class="bi bi-facebook text-white mx-2"></i>
+                        <i class="bi bi-whatsapp text-white mx-2"></i>
+                        <i class="bi bi-instagram text-white mx-2"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- end Swiper -->
+        </div>
+      </div>
+    </div> 
+  </section>
+
+  <!-- section call to action -->
+  <section>
+    <div class="container-fluid bg-section-cta">
+      <div class="container h-100 my-5 py-5">
+        <div class="row h-100 align-items-center justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <p class="f-p h1 text-white">Registrati subito per entrare nel mondo di <span class="tx-acc">Infinity Comics</span></p>
+            <p class="f-s lead text-white fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis reprehenderit excepturi deleniti consequatur hic eveniet ducimus facere quia doloremque perspiciatis praesentium laborum debitis quaerat, corporis pariatur numquam. Iure, unde ipsa.</p>
+            <div class="d-flex justify-content-center mt-5">
+              <button class="btn-register me-5">Ask for login 👍🏻</button>
+              <button class="btn-contact">Ask for info 📚</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer>
+    <div class="container py-5 my-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4">
+          <img src="./downloads/logo.png" width="100" alt="">
+          <p class="f-p h1 text-white">Infinity Comics</p>
+          <p class="copyright f-s lead tx-acc"></p>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <p class="text-white f-s">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam cumque voluptate, architecto odio neque optio iste exercitationem hic, distinctio aut laboriosam similique reprehenderit eligendi cum, maxime fugit dolores aspernatur voluptatibus!</p>
+        </div>
+        <div class="col-12 col-md-4 d-flex justify-content-end">
+          <ul class="f-s text-white">
+            <li>
+              <a href="" class="text-decoration-none tx-acc">contatta con il team di sviluppo</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none tx-acc">scopri come aggiungere annuncio</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none tx-acc">richiedi infomazioni</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none tx-acc">richiedi come essere admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    
+    const nav = document.querySelector('#nav')
+    
+    document.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        nav.classList.add('bg-sec')
+        nav.style.transition = ".2s"
+      } else {
+        nav.classList.remove('bg-sec')
+      }
+    })
+    
+    
+    const users = document.querySelector('#users');
+    const ads = document.querySelector('#ads');
+    const delivery = document.querySelector('#delivery');
+    
+    // scrivi una funzione che esegue un conteggio 
+    let start = true;
+    
+    function createInterval(number, element, delay) {
+      
+      let counter = 0;
+      
+      if (start) {
+        let interval = setInterval(() => {
+          if (counter < number) {
+            counter++
+            element.innerHTML = counter
+          } else {
+            clearInterval(interval)
+          }
+        }, delay);
+      }
+    }
+    
+    
+    // Intersection Observer, una api del web browser che si occupa di far scattare una funzione nel momento in cui un nodo del dom é visibile ed entra nel viewport height del browser
+    
+    let observer = new IntersectionObserver( (entries) => {
+      entries.forEach( entry => {
+        if (entry.isIntersecting) {
+          createInterval(50, users, 50)
+          createInterval(100, ads, 20)
+          createInterval(50, delivery, 50)
+          start = false;
+        }
+      });
+    } , {
+      threshold: [1]
+    })
+    
+    observer.observe(users)
+    
+    
+    fetch('./comics.json')
+    .then(response => response.json())
+    .then(json => {
+
+      let collection = json.data.results
+      
+      
+      // per ogni fumetto in collection devo creare una chiave detta "pubblished" con valore una data random tra il 01/01/2023 e 15/03/2023
+      
+      function randomDate(start, end) {
+        return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+      }
+      
+      collection.forEach((comic) => {
+        comic.pubblished = randomDate(new Date(2023, 0, 1), new Date())
+      })
+      
+      // devo filtrare i 4 ultimi fumetti piu recenti e esporre il risultato nell html
+      let sortingByDateComics = collection.sort((a, b) => b.pubblished - a.pubblished).slice(0,4)
+      
+      
+      // prendere il luogo dove andare a visualizzare le card 
+      const upcomingBooksWrapper = document.querySelector('#upcomingBooksWrapper');
+      sortingByDateComics.forEach((comic) => {
+        let div = document.createElement('div')
+        div.classList.add('col-12', 'col-md-6' ,'mb-4')
+        div.innerHTML = `
+        <div class="card bg-card-comic p-2 h-100">
+          <div class="container h-100">
+            <div class="row h-100">
+              <div class="col-5">
+                <img src="${(!comic.images.length == 0) ? comic.images[0].path : "https://blogs.cul.columbia.edu/rbml/files/2021/12/1991QuarterlyCover-scaled"}.jpg" class="rounded-start img-fluid" alt="...">
+              </div>
+              <div class="col-7 h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <p class="f-p h1 tx-thi">${comic.title.split("#")[0]}</p>
+                  <p class="f-p lead text-white">${comic.series.name}</p>
+                  <p class="f-s text-secondary">${comic.description ?  comic.description.substring(0, 200) + " [...]": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus libero eveniet odit aliquam esse saepe. Quo, non vero animi, saepe natus doloribus quibusdam nihil eaque id nobis veniam! Autem, minima?Lorem ipsum dolor, sit amet consectetur adipisicing elit."}</p>
+                  <p class="f-s text-white m-0 fw-bold fst-italic">${comic.pubblished.toLocaleDateString("it-IT")}</p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="f-p tx-acc h3 m-0">€</p>
+                  <button class="btn d-flex align-items-center">
+                    <a href="./Detail.html" class="my-0 me-2 f-s tx-acc fw-bold text-decoration-none">Checkout</a>
+                    <i class="bi bi-arrow-right-circle-fill fs-2 tx-acc"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        `
+        upcomingBooksWrapper.append(div)
+        
+      })
+
+      const copyright = document.querySelector('.copyright')
+      copyright.textContent = json.attributionText
+      
+      
+    })
+    
+    
+    let swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    
+    
+    
+  </script>
+</body>
+</html>

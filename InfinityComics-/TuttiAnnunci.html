@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>  
+  <link rel="stylesheet" href="./css/main.css">
+  
+  <style>
+
+    .sidebarFilters {
+      position: sticky;
+      top: 0px;
+      padding: 30px 0px;
+    }
+
+    .searchFilter {
+      position: sticky;
+      top: 0px;
+      z-index: 999; 
+      padding: 30px 0px;
+    }
+
+    #sortByNewest {
+      cursor: pointer;
+    }
+
+    #sortByOldest {
+      cursor: pointer;
+    }
+  
+    
+  </style>
+</head>
+<body>
+  
+  <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-trasparent" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand d-block d-md-none" href="#">
+        <img src="./downloads/logo.png" width="100" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 d-flex align-items-center">
+          <li class="nav-item">
+            <a class="navbar-brand me-auto d-none d-md-block" href="#">
+              <img src="./downloads/logo.png" width="120" alt="">
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link f-s text-white" href="./Annuncio.html">Aggiungi fumetto</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link f-s text-white" href="#">Contatta con noi</a>
+          </li>
+          
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn f-s dropdown-toggle text-white rounded-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Multilingua
+              </button>
+              <ul class="dropdown-menu f-s rounded-0">
+                <li><button class="dropdown-item" type="button">EN 🇬🇧</button></li>
+                <li><button class="dropdown-item" type="button">ES 🇪🇸</button></li>
+                <li><button class="dropdown-item" type="button">IT 🇮🇹</button></li>
+              </ul>
+            </div>
+          </li>
+          
+        </ul>
+        
+        <button class="btn text-white f-s mx-3">
+          <i class="bi bi-person-add"></i>
+          <a class="text-decoration-none text-white" href="./Register.html">Register</a>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-3 py-3 mb-3">
+        
+        <div class="sidebarFilters">
+          
+          <div id="Releases">
+            <p class="f-s text-white h2">
+              <i class="bi bi-hourglass-split"></i> New Releases
+            </p>
+            <ul class="list-unstyled f-s text-white">
+              <li id="sortByNewest" class="my-3">
+                Order by newest ⬆️
+              </li>
+              <li id="sortByOldest"  class="my-3">
+                Order by oldest ⬇️
+              </li>
+            </ul>
+          </div>
+          <div id="Price">
+            <p class="f-s text-white h2">
+              <i class="bi bi-wallet2"></i> Prices
+            </p>
+            
+            <ul class="list-unstyled f-s text-white">
+              <li class="my-3">
+                <a href="" class="text-decoration-none text-white">0 - 5 €</a>
+              </li>
+              <li class="my-3">
+                <a href="" class="text-decoration-none text-white">5 - 10 €</a>
+              </li>
+              <li class="my-3">
+                <a href="" class="text-decoration-none text-white">10 - 15 €</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      <div class="col-12 col-md-9 mb-3 ">
+
+        <div class="searchFilter bg-tot">
+          <h1 class="f-s text-white display-3">New trends comics releases</h1>
+          <form>
+            <input id="searchComics" class="form-control bg-secondary border-0 rounded-5 w-50" type="search" placeholder=" 🔍 Search " aria-label="Search">
+          </form>
+        </div>
+        
+              
+        
+        <div id="comicsWrapper" class="row my-3 py-3">
+          <div class="col-12">
+            <div id="load" class="d-flex align-items-center text-white f-s h2">
+              <strong>Loading...</strong>
+              <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container py-5 my-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4 mb-3">
+          <img src="./downloads/logo.png" width="100" alt="">
+          <p class="f-p h1 text-white">Infinity Comics</p>
+          <p class="copyright f-s lead tx-acc"></p>
+        </div>
+        <div class="col-12 col-md-4 mb-3 text-center">
+          <p class="text-white f-s">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam cumque voluptate, architecto odio neque optio iste exercitationem hic, distinctio aut laboriosam similique reprehenderit eligendi cum, maxime fugit dolores aspernatur voluptatibus!</p>
+        </div>
+        <div class="col-12 col-md-4 d-flex justify-content-end">
+          <ul class="f-s text-white">
+            <li>
+              <a href="" class="text-decoration-none tx-acc">contatta con il team di sviluppo</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none tx-acc">scopri come aggiungere annuncio</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none tx-acc">richiedi infomazioni</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none tx-acc">richiedi come essere admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    
+    
+    fetch('./comics.json')
+    .then(response => response.json())
+    .then(json => {
+      
+      let collection = json.data.results
+      
+      console.log(collection)
+      
+      function randomDate(start, end) {
+        return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+      }
+      
+      collection.forEach((comic) => {
+        comic.pubblished = randomDate(new Date(2023, 0, 1), new Date())
+      })
+
+      const sortByNewest = document.querySelector('#sortByNewest');
+      const sortByOldest = document.querySelector('#sortByOldest');
+      const searchComics = document.querySelector('#searchComics');
+
+      const load = document.querySelector('#load');
+
+      function newestSorting(array) {
+        return array.sort((a,b) => b.pubblished - a.pubblished)
+      }
+
+      function oldestSorting(array) {
+        return array.sort((a,b) => a.pubblished - b.pubblished)
+      }
+      
+      function search(array, comicsName) {
+        let filtroSearch = array.filter(comic => {
+          return comic.title.match(new RegExp(comicsName, "gi"))
+        })
+        return filtroSearch;
+      }
+
+      function getComicsPriceRangeMin(array) {
+        let filtroPrice = array.filter(comic => {
+          return comic.prices[0].price >= 0 && comic.prices[0].price <= 3
+        })
+        return filtroPrice;
+      }
+
+      searchComics.addEventListener('input' , () => {
+        let searchedName = searchComics.value;
+        show(search(collection, searchedName))
+      })
+
+      sortByNewest.addEventListener('click', () => {
+        show(newestSorting(collection))
+      })
+
+      sortByOldest.addEventListener('click', () => {
+        show(oldestSorting(collection))
+      })
+      
+      show(collection)
+
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve,ms)) 
+      }
+      
+      async function show(dati) {
+        await sleep(1000)
+        load.classList.add('d-none')
+        const comicsWrapper = document.querySelector('#comicsWrapper');   
+        comicsWrapper.innerHTML = "";
+        dati.forEach(comic => {
+          let div = document.createElement('div')
+          div.classList.add('col-12', 'col-md-4', 'mb-3')
+          div.innerHTML = `
+          <div class="card bg-card-comic p-2 h-100">
+            <img src="${(!comic.images.length == 0) ? comic.images[0].path : "https://blogs.cul.columbia.edu/rbml/files/2021/12/1991QuarterlyCover-scaled"}.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <p class="f-p h1 tx-thi">${comic.title.split("#")[0]}</p>
+                <p class="f-p lead text-white">${comic.series.name}</p>
+                <p class="f-s text-white m-0 fw-bold fst-italic">${comic.pubblished.toLocaleDateString("it-IT")}</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="f-p tx-acc h3 m-0">${comic.prices[0].price} €</p>
+                <button class="btn d-flex align-items-center">
+                  <p class="my-0 me-2 f-s tx-acc fw-bold">Checkout</p>
+                  <i class="bi bi-arrow-right-circle-fill fs-2 tx-acc"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          `
+          comicsWrapper.append(div)
+        });
+      }
+      
+      
+    })
+    
+    
+    
+    
+  </script>
+</body>
+</html>
